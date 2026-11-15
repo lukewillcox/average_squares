@@ -29,16 +29,15 @@ def average_of_squares(list_of_numbers, list_of_weights=None):
         for number, weight
         in zip(list_of_numbers, effective_weights)
     ]
-    return sum(squares)
-
+    return sum (squares) / len(list_of_numbers)
 
 def convert_numbers(list_of_strings):
     """Convert a list of strings into numbers, ignoring whitespace.
     
     Example:
     --------
-    >>> convert_numbers(["4", " 8 ", "15 16", " 23    42 "])
-    [4, 8, 15, 16]
+    >>> convert_numbers(["4", " 8 ", "15 16", " 23.0    42.0 "])
+    [4.0, 8.0, 15.0, 16.0, 23.0, 42.0]
 
     """
     all_numbers = []
